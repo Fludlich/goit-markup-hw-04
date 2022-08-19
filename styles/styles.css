@@ -122,6 +122,7 @@ body {
   margin-right: 10px;
   width: 20px;
   height: 20px;
+  fill: var(--fill-icon-color);
 }
 .header-contacts-list{
   display: flex;
@@ -458,7 +459,7 @@ fill: var(--accent-color);
 }
 .footer-pre-columns{
   display: flex;
-  
+  justify-content: baseline;
 }
 .footer-list-columns{
   display: flex;
@@ -547,3 +548,4 @@ background-color: rgba(255, 255, 255, 0.1);
 .blanc-text {
   border: 1px solid rgba(238, 238, 238, 1);
 }
+
