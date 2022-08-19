@@ -120,9 +120,15 @@ body {
 }
 .header-contacts-icon{
   margin-right: 10px;
-  width: 20px;
-  height: 20px;
   fill: var(--fill-icon-color);
+}
+.header-contacts-icon.a{
+width: 16px;
+height: 12px;
+}
+.header-contacts-icon.b{
+  width: 10px;
+  height: 16px;
 }
 .header-contacts-list{
   display: flex;
