@@ -105,6 +105,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--tytle-text-color);
 }
+
 .header-contacts a {
   
   font-family: "Roboto";
@@ -118,15 +119,15 @@ body {
 .header-contacts {
   margin-left: auto;
 }
-.header-contacts-icon{
+.header-icon{
   margin-right: 10px;
   fill: var(--fill-icon-color);
 }
-.header-contacts-icon.a{
+.header-icon.mail{
 width: 16px;
 height: 12px;
 }
-.header-contacts-icon.b{
+.header-icon.phone{
   width: 10px;
   height: 16px;
 }
@@ -139,7 +140,20 @@ display: flex;
 align-items: center;
 }
 .current {
+
+  position: relative;
   color: var(--accent-color);
+}
+.current::after{
+content: "";
+position: absolute;
+left: 0;
+bottom: -44px;
+display: block;
+width: 100%;
+height: 4px;
+border-radius: 2px;
+background-color:var(--accent-color);
 }
 .header-item:not(:last-child) {
   margin-right: 50px;
@@ -208,6 +222,7 @@ align-items: center;
 /*-----------------------hower-focus--*/
 .btn:hover,
 .btn:focus{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -215,11 +230,13 @@ align-items: center;
   0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn-hero:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
 .header-text:hover,
 .header-text:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--accent-color);
 }
 
@@ -227,17 +244,33 @@ align-items: center;
 .footer-mail:focus,
 .footer-phone:hover,
 .footer-phone:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--accent-color);
 }
 .header-logo:focus,
 .footer-logo:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196f3;
 }
 
 .portfolio-item:hover,
 .portfolio-item:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.header-contacts a:hover,
+.header-contacts a:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--accent-color);
+}
+.header-mail:hover .header-icon,
+.header-phone:hover .header-icon,
+.header-mail:focus .header-icon,
+.header-phone:focus .header-icon{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+fill: var(--accent-color);
+}
+
 /*---------------about-------------*/
 .about-list {
   margin: 0%;
@@ -280,16 +313,6 @@ margin-bottom: 30px;
   height: 70px;
   width: 70px;
 }
-.header-contacts a:hover,
-.header-contacts a:focus {
-  color: var(--accent-color);
-}
-.header-mail:hover .header-contacts-icon,
-.header-phone:hover .header-contacts-icon,
-.header-mail:focus .header-contacts-icon,
-.header-phone:focus .header-contacts-icon{
-fill: var(--accent-color);
-}
 
 /*---------------work-------------------*/
 .work-list {
@@ -302,9 +325,27 @@ fill: var(--accent-color);
 }
 .work-item {
   margin-right: 30px;
+  position: relative;
 }
 .work-list :last-child {
   margin-right: 0%;
+}
+.work-text{
+padding: 27px 0 27px 0;
+ margin: 0%;
+  left: 0%;
+  bottom: 0%;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  font-size: 14px !important;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 /*--------------team-----------------*/
 .team {
@@ -375,11 +416,13 @@ fill: var(--accent-color);
 
 .team-link-icon:hover,
 .team-link-icon:focus{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--accent-color);
   fill: #fff;
 }
 .team-link-icon:hover .icon-team,
 .team-link-icon:focus .icon-team{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--primary-white-color);
 }
 /* -------------clients---------------- */
@@ -416,11 +459,13 @@ fill: var(--accent-color);
 
 .client-list-link:hover,
 .client-list-link:focus{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border:1px solid var(--accent-color);
 }
 
 .client-list-link:hover .icon-clients,
 .client-list-link:focus .icon-clients{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 fill: var(--accent-color);
 }
 /*--------------footer-----------------*/
@@ -493,6 +538,7 @@ background-color: rgba(255, 255, 255, 0.1);
 }
 .footer-link-second:hover,
 .footer-link-second:focus{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--accent-color);
 }
 /*------portfolio------------------------*/
