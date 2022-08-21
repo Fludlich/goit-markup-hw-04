@@ -121,15 +121,17 @@ body {
 }
 .header-icon{
   margin-right: 10px;
-  fill: var(--fill-icon-color);
+  
 }
 .header-icon.mail{
 width: 16px;
 height: 12px;
+fill: var(--primary-text-color);
 }
 .header-icon.phone{
   width: 10px;
   height: 16px;
+  fill: var(--primary-text-color);
 }
 .header-contacts-list{
   display: flex;
